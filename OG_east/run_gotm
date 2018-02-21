@@ -7,19 +7,19 @@ echo "Starting GOTM-BFM run"
 rm log.out
 
 run_dir=`pwd`
-export out_dir=your_output_directory
+export out_dir=~/gotm_out_210218
 #export out_dir=/home/cc06/gotm-cases/oysterground_sep2009/GOTMruns
 ext=".nc"
 
 #----------------------------------
 #export start="1958-01-01 12:00:00"
-export start="2007-01-01 12:00:00"
-export stop="2007-01-31 12:00:00"
+export start="my_start_date"
+export stop="my_end_date"
 #export stop="1958-03-31 12:00:00"
 #export stop="2099-11-30 12:00:00"
 #export dt=60.
 
-export out_fn="OGEast_01"  # run ID
+export out_fn="my_run_id"  # run ID
 #export out_fn="OGclimaterun"  # run ID
 # choose site from lp (liverpool bay), og (oyster grounds), wg (west gabbard),
 #                  nd (north dogger),sb (southern bight=sean gas field)

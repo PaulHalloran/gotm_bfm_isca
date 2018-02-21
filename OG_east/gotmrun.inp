@@ -15,7 +15,7 @@
 ! buoy_method=  1: equation of state, 2: dynamic equation
 !-------------------------------------------------------------------------------
  &model_setup
-  title=        "OG_east_01",
+  title=        "my_run_title",
   nlev=         40,
 !  dt=           600.,
   dt=           150.,
@@ -53,8 +53,8 @@
  &time
   timefmt=      2,
   MaxN=         144,
-  start=           "2007-01-01 12:00:00",
-  stop=            "2007-01-31 12:00:00",
+  start=           "my_start_date",
+  stop=            "my_end_date",
 !  stop=            "1958-01-31 12:00:00",
 !  start=        "1958-01-01 12:00:00",
 !  stop=         "1961-01-01 12:00:00",
@@ -78,8 +78,8 @@
 ! nsave=        720,
  &output
   out_fmt=      2,
-  out_dir=      "/gpfs/ts0/home/ph290/gotm_200218/gotm_out",
-  out_fn=       "OG_east_01",
+  out_dir=      "your_output_directory",
+  out_fn=       "output_netcdf_file_name",
   !nsave=        144,
 !  nsave=        144,  ! daily output
   nsave=        576,  ! daily output
