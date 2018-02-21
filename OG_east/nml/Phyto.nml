@@ -1,0 +1,99 @@
+!-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+! MODEL  BFM - Biogeochemical Flux Model version 2.50-g
+!-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+!BOP
+!
+! !ROUTINE: Phyto
+!
+! DESCRIPTION
+!   List of parameters values
+
+!   This file is generated directly from OpenSesame model code, using a code 
+!   generator which transposes from the sesame meta language into F90.
+!   F90 code generator written by P. Ruardij.
+!   structure of the code based on ideas of M. Vichi.
+!
+! !INTERFACE
+! parameter values for mem_Phyto filled by InitPhyto
+!
+
+!  
+!
+! !AUTHORS
+!   mfstep/ERSEM team
+!
+! !REVISION_HISTORY
+!   ---
+!
+! COPYING
+!   
+!   Copyright (C) 2006 P. Ruardij, the mfstep group, the ERSEM team 
+!   (rua@nioz.nl, vichi@bo.ingv.it)
+!
+!   This program is free software; you can redistribute it and/or modify
+!   it under the terms of the GNU General Public License as published by
+!   the Free Software Foundation;
+!   This program is distributed in the hope that it will be useful,
+!   but WITHOUT ANY WARRANTY; without even the implied warranty of
+!   MERCHANTEABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!   GNU General Public License for more details.
+!
+!EOP
+!-------------------------------------------------------------------------!
+!BOC
+! namelist /Phyto_parameters/ p_q10, p_sum, p_srs, p_ses,p_sdmo, p_seo, p_pu_ea, &
+!  p_pu_ra, p_qnlc, p_qplc, p_qslc, p_qnRc, p_qpRc, p_qsRc, p_qun, p_qup, &
+!  p_qus, p_sbuf, p_xqn, p_xqp, p_xqs, p_esNI, p_thdo, p_res, p_lN4,p_lN1,p_chPs, &
+!   p_iRI, p_alpha_chl, p_sdchl,p_clO2o,p_qchlc,p_qlPlc,p_limnut,p_qmR3P6, &
+!   p_qkR3P6 ,p_sP2P6,p_cP2P6n,p_cP2P6p,p_sgun,p_sgup
+! p_sum = 2.50,2.75,3.5,1.5,2.00,5.6,
+! p_pu_ea = 0.05,0.1,0.1,0.15,0.05,0.1,
+
+&Phyto_parameters
+p_q10 = 2.0,2.0,2.0,2.0,2.0,2.0,
+p_sum = 2.25,2.75,3.5,1.5,2.75,5.6,
+p_srs = 0.1,0.05,0.1,0.1,0.05,0.200,
+p_ses = 0.0,0.00,0.0,0.0,0.00,0.20,
+p_sdmo = 0.0,0.0,0.0,0.0,1.0,0.2,
+p_seo = 0.0,0.0,0.0,0.0,0.0,0.0,
+p_pu_ea = 0.05,0.1,0.1,0.15,0.10,0.1,
+p_pu_ra = 0.05,0.1,0.2,0.10,0.10,0.0,
+p_qnlc = 0.00506,0.00506,0.00506,0.00506,0.00506,0.00375,
+p_lqnlc = 0.00687,0.00687,0.00687,0.00687,0.00687,0.00497,
+p_qplc = 0.0004288,0.0004288,0.0004288,0.0004288,0.0004288,0.0003063,
+p_qslc = 0.009,0.0,0.0,0.0,0.008,0.00,
+p_qnRc = 0.0126,0.0126,0.0126,0.0126,0.0126,0.009,
+p_qpRc = 0.0007862,0.0007862,0.0007862,0.0007862,0.0007862,0.0005616,
+p_qsRc = 0.018,0.0,0.0,0.0,0.009,0.0,
+p_qun = 0.05,2.5,20.00,0.5,03.2,2.5,
+p_qup = 0.005,0.25,2.000,0.05,0.32,0.25,
+p_qus = 0.075,0.0,0.0,0.0,0.25,0.0,
+p_sbuf = 0.05,0.5,0.5,0.05,0.5,0.05,
+p_xqn = 2.0,2.0,2.0,2.0,2.0,2.0,
+p_xqp = 4.0,2.0,2.0,2.0,2.0,2.0,
+p_xqs = 4.0,0.0,0.0,0.0,2.0,0.0,
+p_esNI = 0.0,0.0,0.0,0.0,0.0,0.0,
+p_thdo = 0.0,0.0,0.0,0.0,0.005,0.00,
+p_res = 0,0.0,0.0,0.0,0.0,0.0,
+p_lN3N4n = 1.0,0.5,0.1,1.0,0.1,0.5,
+p_lureaN4n = 2.0,2.0,0.3,2.0,0.3,2.0,
+p_lN1 = 0.1,0.5,0.1,1.0,0.1,0.001,
+p_chPs = 0.3,0.0,0.0,0.0,0.3,0.0,
+p_iRI = 2,1,1,1,2,3,
+p_alpha_chl = 1.8e-05,0.80e-05,1.2e-05,0.68e-05,1.0e-05,1.700e-05,
+p_alpha_q10 = 1.0,1.0,1.0,1.0,1.0,1.0
+p_sdchl_l = 0.12,0.12,0.12,0.12,0.12,0.12,
+p_sdchl_d = 0.03,0.05,0.06,0.03,0.05,0.08,
+p_clO2o = 30.0,30.0,30.0,30.0,30.0,30.0,
+p_qchlc = 0.03,0.03,0.02,0.02,0.02,0.03,
+p_qlPlc = 0.0,0.0,0.0,0.0,0.0,0.005,
+p_limnut = 1,
+p_sgun = 5.5,
+p_sgup = 18.0
+/
+
+
+!BOP
+!-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+! MODEL  BFM - Biogeochemical Flux Model version 2.50
+!-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

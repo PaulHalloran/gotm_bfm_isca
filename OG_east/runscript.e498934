@@ -1,0 +1,5 @@
+rm: cannot remove 'log.out': No such file or directory
+mkdir: cannot create directory '/gpfs/scratchenv/dtc13fpu/GOTMruns/OGE': No such file or directory
+mkdir: cannot create directory '/gpfs/scratchenv/dtc13fpu/GOTMruns/OGE/plots': No such file or directory
+cp: target '/gpfs/scratchenv/dtc13fpu/GOTMruns/OGE/' is not a directory
+cp: cannot create regular file '/gpfs/scratchenv/dtc13fpu/GOTMruns/OGE/': No such file or directory
