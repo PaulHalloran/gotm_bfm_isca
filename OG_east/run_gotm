@@ -7,7 +7,7 @@ echo "Starting GOTM-BFM run"
 rm log.out
 
 run_dir=`pwd`
-export out_dir=~/gotm_out_210218
+export out_dir=your_output_directory
 #export out_dir=/home/cc06/gotm-cases/oysterground_sep2009/GOTMruns
 ext=".nc"
 
